@@ -102,7 +102,7 @@ export const updateProfile = async (req, res) => {
     }
 
     const uploadResponse = await cloudinary.uploader.upload(profilePic); //uploading image to cloudinary
-    //if img is previously uploaded then how we will remove for the same user?
+
     const user = await User.findById(userId);
 
     const updateUser = await User.findByIdAndUpdate(
