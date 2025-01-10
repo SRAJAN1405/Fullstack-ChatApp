@@ -62,9 +62,7 @@ export const sendMessage = async (req, res) => {
     });
 
     await newMessage.save();
-    //need of socket io..Imagine you're having a real-time conversation with someone. You don't want to constantly refresh the page to see if they've replied, right? That's where Socket.IO comes in!
-    //This means messages can be sent and received instantly without needing to refresh the page.
-    //socket io is used to send messages in real time
+
 
     const receiverSocketId = getReceiverSocketId(recieverId);
     if (receiverSocketId) {
